@@ -1,0 +1,292 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Grayish-Blue-Two: hsl(214, 23%, 80%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+  --ff-manrope: "Manrope", sans-serif;
+}
+
+/* style reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+
+/* general styling */
+
+body {
+  background-color: var(--Light-Grayish-Blue);
+  font-family: var(--ff-manrope);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: 1.5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 400px;
+  color: var(--Very-Dark-Grayish-Blue);
+  position: relative;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.card-image img {
+  height: 100%;
+  object-fit: fill;
+}
+
+.card-info {
+  background-color: var(--White);
+}
+
+.card-heading {
+  padding: 2rem 2rem 1.8rem;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card-heading > p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+.share-icons-mobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  color: white;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  padding: 1.5rem 2rem;
+}
+
+.share-icons-mobile img {
+  width: 1.5rem;
+}
+
+.flex-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.desktop {
+  display: none;
+}
+
+.share-icons {
+  display: none;
+}
+
+.share {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--Grayish-Blue);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.user-info img {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 700;
+}
+
+.date {
+  font-size: 0.9rem;
+}
+
+.share-btn {
+  all: unset;
+  padding: 0.9rem;
+  background-color: var(--Light-Grayish-Blue);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.share-btn::before {
+  content: "";
+  background-image: url(images/icon-share.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 1rem;
+  height: 1rem;
+}
+
+.share-btn img {
+  width: 1.2rem;
+}
+
+.share-btn:hover {
+  background-color: var(--Grayish-Blue-Two);
+}
+
+.active-button {
+  background-color: var(--Grayish-Blue-Two);
+}
+
+.active-button:hover {
+  background-color: var(--Light-Grayish-Blue);
+}
+
+@media (min-width: 800px) {
+  .card {
+    grid-template-columns: 40% 60%;
+    max-width: 800px;
+    overflow: visible;
+  }
+
+  .share-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--White);
+    position: absolute;
+    top: -5.5rem;
+    right: -12.6%;
+    z-index: 10;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    padding: 0.8rem 2rem;
+    border-radius: 0.4rem;
+  }
+
+  .share-icons::before,
+  .share-icons::after {
+    content: "";
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    position: absolute;
+    bottom: -0.4rem;
+    z-index: -1;
+  }
+
+  .share-icons::before {
+    right: 50%;
+    transform: skew(0, 50deg);
+  }
+
+  .share-icons::after {
+    left: 50%;
+    transform: skew(0, -50deg);
+  }
+
+  .icon-active {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .card-info {
+    border-radius: 0 0.6rem 0.6rem 0;
+  }
+
+  .card-image {
+    border-radius: 0.6rem 0 0 0.6rem;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <article class="card">
+        <div class="card-image">
+          <img src="images/drawers.jpg" alt="drawer with flower on it" />
+        </div>
+        <div class="card-info">
+          <div class="card-heading">
+            <h1>
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I've got some simple tips to
+              help you make any room feel complete.
+            </p>
+          </div>
+
+          <div class="desktop">
+            <div class="card-footer">
+              <div class="user-info">
+                <img src="images/avatar-michelle.jpg" alt="avatar" />
+                <div>
+                  <p class="username">Michelle Appleton</p>
+                  <p class="date">28 Jun 2020</p>
+                </div>
+              </div>
+              <button class="share-btn" id="share-btn"></button>
+              <div class="share-icons icon-active" id="icons">
+                <span class="share">Share</span>
+                <a href=""><img src="images/icon-facebook.svg" alt="" /></a>
+                <a href=""><img src="images/icon-twitter.svg" alt="" /></a>
+                <a href=""><img src="images/icon-pinterest.svg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile">
+            <div class="card-footer" id="mobile-footer">
+              <div class="user-info">
+                <img src="images/avatar-michelle.jpg" alt="avatar" />
+                <div>
+                  <p class="username">Michelle Appleton</p>
+                  <p class="date">28 Jun 2020</p>
+                </div>
+              </div>
+              <button class="share-btn" id="share-btn-mobile"></button>
+            </div>
+            <div class="share-icons-mobile" id="share-mobile">
+              <div class="flex-items">
+                <span class="share">Share</span>
+                <a href=""><img src="images/icon-facebook.svg" alt="" /></a>
+                <a href=""><img src="images/icon-twitter.svg" alt="" /></a>
+                <a href=""><img src="images/icon-pinterest.svg" alt="" /></a>
+              </div>
+              <button
+                class="share-btn active-button"
+                id="close-btn-mobile"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="index.js"></script>
+  </body>
+</html>
